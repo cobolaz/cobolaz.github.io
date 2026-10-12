@@ -18,6 +18,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Sprite.Acts.RotateClockwise,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.SetVar,
@@ -32,7 +33,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
-		C3.Plugins.Text.Acts.SetPos
+		C3.Plugins.Text.Acts.SetPos,
+		C3.Plugins.Sprite.Cnds.IsOverlapping,
+		C3.Behaviors.Physics.Acts.SetVelocity
 	];
 };
 self.C3_JsPropNameTable = [
@@ -60,6 +63,10 @@ self.C3_JsPropNameTable = [
 	{RestartPlease: 0},
 	{Batcave: 0},
 	{Telephone: 0},
+	{spinner: 0},
+	{Garlic: 0},
+	{Pool: 0},
+	{Sprite: 0},
 	{ballVelocity: 0}
 ];
 
@@ -83,5 +90,9 @@ self.InstanceType = {
 	Audio: class extends self.IInstance {},
 	RestartPlease: class extends self.ITextInstance {},
 	Batcave: class extends self.ISpriteInstance {},
-	Telephone: class extends self.ISpriteInstance {}
+	Telephone: class extends self.ISpriteInstance {},
+	spinner: class extends self.ISpriteInstance {},
+	Garlic: class extends self.ISpriteInstance {},
+	Pool: class extends self.ISpriteInstance {},
+	Sprite: class extends self.ISpriteInstance {}
 }
