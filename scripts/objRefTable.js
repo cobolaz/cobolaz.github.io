@@ -10,6 +10,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Anchor,
 		C3.Plugins.Touch,
 		C3.Plugins.Audio,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Tilemap,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Behaviors.Physics.Acts.SetWorldGravity,
 		C3.Plugins.Text.Acts.SetText,
@@ -20,6 +22,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Acts.RotateClockwise,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Touch.Cnds.IsInTouch,
@@ -33,9 +36,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
-		C3.Plugins.Text.Acts.SetPos,
-		C3.Plugins.Sprite.Cnds.IsOverlapping,
-		C3.Behaviors.Physics.Acts.SetVelocity
+		C3.Plugins.Text.Acts.SetPos
 	];
 };
 self.C3_JsPropNameTable = [
@@ -67,6 +68,9 @@ self.C3_JsPropNameTable = [
 	{Garlic: 0},
 	{Pool: 0},
 	{Sprite: 0},
+	{Keyboard: 0},
+	{Tilemap: 0},
+	{Sprite2: 0},
 	{ballVelocity: 0}
 ];
 
@@ -94,5 +98,8 @@ self.InstanceType = {
 	spinner: class extends self.ISpriteInstance {},
 	Garlic: class extends self.ISpriteInstance {},
 	Pool: class extends self.ISpriteInstance {},
-	Sprite: class extends self.ISpriteInstance {}
+	Sprite: class extends self.ISpriteInstance {},
+	Keyboard: class extends self.IInstance {},
+	Tilemap: class extends self.ITilemapInstance {},
+	Sprite2: class extends self.ISpriteInstance {}
 }
